@@ -3,15 +3,15 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'alon4551@gmail.com',
-    pass: 'yeruham@3341'
+    user: 'your email addresss',
+    pass: 'your email password'
   }
 });
-
+//you need to allow your gmail account to use less secure app
 
 const Send =(email)=> {
     const mailOptions = {
-        from: 'alon4551@gmail.com',
+        from: 'your email addresss',
         to: email,
         subject: 'verify account',
         text: `please click on this link http://localhost:3000/verify/${email}`
